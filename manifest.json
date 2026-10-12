@@ -1,0 +1,84 @@
+{
+  "name": "HealSense - Wound Care Monitoring",
+  "short_name": "HealSense",
+  "description": "Early infection detection and smart wound care monitoring",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#185FA5",
+  "background_color": "#F1EFE8",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23185FA5' width='192' height='192'/><text x='50%' y='50%' font-size='100' font-weight='bold' font-family='sans-serif' fill='white' text-anchor='middle' dominant-baseline='middle'>HS</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%23185FA5' width='192' height='192'/><text x='50%' y='50%' font-size='100' font-weight='bold' font-family='sans-serif' fill='white' text-anchor='middle' dominant-baseline='middle'>HS</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect fill='%23185FA5' width='512' height='512'/><text x='50%' y='50%' font-size='280' font-weight='bold' font-family='sans-serif' fill='white' text-anchor='middle' dominant-baseline='middle'>HS</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 540 720'><rect fill='%23F1EFE8' width='540' height='720'/><rect fill='%23185FA5' width='540' height='80'/><text x='50%' y='40' font-size='32' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='middle'>HealSense</text></svg>",
+      "sizes": "540x720",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": ["medical", "health"],
+  "shortcuts": [
+    {
+      "name": "View Sensor Readings",
+      "short_name": "Sensors",
+      "description": "Quick access to current sensor readings",
+      "url": "./index.html#sensors",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect fill='%23185FA5' width='96' height='96' rx='20'/><text x='50%' y='50%' font-size='50' fill='white' text-anchor='middle' dominant-baseline='middle'>📊</text></svg>",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    },
+    {
+      "name": "View Care Reminders",
+      "short_name": "Reminders",
+      "description": "Check upcoming care reminders",
+      "url": "./index.html#reminders",
+      "icons": [
+        {
+          "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 96'><rect fill='%230F6E56' width='96' height='96' rx='20'/><text x='50%' y='50%' font-size='50' fill='white' text-anchor='middle' dominant-baseline='middle'>✓</text></svg>",
+          "sizes": "96x96",
+          "type": "image/svg+xml"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "./share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "health_data",
+          "accept": ["application/json"]
+        }
+      ]
+    }
+  }
+}
